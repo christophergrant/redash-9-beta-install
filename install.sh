@@ -7,5 +7,5 @@ docker build --pull=true --build-arg databricks_odbc_driver_url="https://databri
 
 # docker compose yaml edited to use the new odbc image, as well as migrate from v8 to v9
 # https://github.com/getredash/redash/releases/tag/v9.0.0-beta
-cp -rf ../new_docker-compose.yml $REDASH_DOCKER_HOME/docker-compose.yml
+cp -f ../data/new_docker-compose.yml $REDASH_DOCKER_HOME/docker-compose.yml
 docker-compose -f $REDASH_DOCKER_HOME/docker-compose.yml up --force-recreate --build -d

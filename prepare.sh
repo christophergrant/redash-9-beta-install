@@ -6,5 +6,4 @@ cd redash/
 git checkout release/9.0.x
 
 cd ..
-cp -f Dockerfile redash/
-
+cp -f data/Dockerfile redash/
