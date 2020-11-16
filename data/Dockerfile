@@ -79,10 +79,8 @@ COPY --from=frontend-builder /frontend/client/dist /app/client/dist
 RUN chown -R redash /app
 
 USER root
-# Add more COPY commands if you have more certs to add
-COPY <CERT 1 NAME> /usr/local/share/ca-certificates/
-# If more than one cert, chain multiple chmods together with &&
-RUN chmod 644 /usr/local/share/ca-certificates/<CERT 1 NAME> && update-ca-certificates
+COPY certs/*.crt /usr/local/share/ca-certificates/
+RUN chmod 644 /usr/local/share/ca-certificates/*.crt && update-ca-certificates
 RUN cp -f /etc/ssl/certs/ca-certificates.crt /opt/simba/spark/lib/64/cacerts.pem
 USER redash
 
