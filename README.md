@@ -10,4 +10,4 @@ This repository contains code that automates the process of upgrading from Redas
 5. Run install.sh - **BEWARE: this will overwrite your docker-compose.yml file at /opt/redash completely, back-up as needed** - this will build the images with Redash v9 
 
 # AMI Upgrade
-
+This repository also contains an upgrade script in other/upgrade-ami.sh. 
