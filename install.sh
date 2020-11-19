@@ -15,7 +15,6 @@ if ls certs/*.crt 2> /dev/null; then
     cp -f data/Dockerfile redash/
 else
     echo "No self-signed certs to add"
-    cp -f data/Dockerfile_nocerts redash/Dockerfile
 fi
 
 cd redash/
