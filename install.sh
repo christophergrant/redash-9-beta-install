@@ -17,7 +17,7 @@ if ls certs/*.crt 2> /dev/null; then
     # Copy modified Dockerfile into the Redash Docker context
     cp -f data/Dockerfile redash/
 else
-    echo "No self-signed certs to add"
+    echo "No certs to add to the image"
 fi
 
 cd redash
