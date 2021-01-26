@@ -15,12 +15,7 @@ if ls certs/*.crt 2> /dev/null; then
     mkdir redash/certs
     cp -f certs/* redash/certs
     # Copy modified Dockerfile into the Redash Docker context
-    if [ openssl sha1 Dockerfile | cut -d' ' -f 2  != "e4c24590da62e007a961027ed85dbe4ae845c90c"]; then
-        echo "Dockerfile has been updated, stopping here. Please contact your Databricks representative and delete the redash/ folder"
-        exit 1
-    else
-        cp -f data/Dockerfile redash/
-    fi
+    cp -f data/Dockerfile redash/
 else
     echo "No self-signed certs to add"
 fi
