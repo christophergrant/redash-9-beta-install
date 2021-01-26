@@ -6,7 +6,7 @@ REDASH_DOCKER_HOME=/opt/redash
 # Download the repo
 git clone https://github.com/getredash/redash.git
 cd redash/
-git reset --hard 8b068dfd0b7e03b467bf5c37177fe9c1cb23dae0 # can be commented out, pinning to this to avoid issues with changes in master
+git reset --hard 829247c2d2c1a5ac35cee4c356cce8d718727d06 # can be commented out, pinning to this to avoid issues with changes in master
 
 cd ..
 # Copy certs for worker SSL into the Redash Docker context so we can bake them into the server image
